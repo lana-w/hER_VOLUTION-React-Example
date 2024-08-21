@@ -8,6 +8,7 @@ import Welcome from './Welcome'
 import About from './About'
 import Contact from './Contact'
 import {Routes, Route, Link} from 'react-router-dom'
+import Form from './Form'
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
           <ul>
             <li><Link to="/about">About</Link> </li>
             <li> <Link to="/contact"> Contact </Link></li>
+            <li> <Link to="/form"> Form </Link> </li>
           </ul>
         </nav>
 
@@ -40,6 +42,7 @@ function App() {
           {/* will match /about and /about/...... */}
           {/* With exact: will only match /about */}
           <Route path="/contact" element={<Contact />}  />
+          <Route path="/form" element={<Form />} />
         </Routes>
 
     </BrowserRouter>
